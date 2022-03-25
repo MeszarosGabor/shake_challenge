@@ -1,0 +1,9 @@
+
+# https://currency.getgeoapi.com/
+THIRD_PARTY_API_KEY = "3ff1d53c7851a49beddab7830363a9459bf835af"
+
+
+API_KEY_LENGTH = 12
+QPM_LIMIT = 5
+REQUEST_CREDIT_COST = 1
+STARTING_CREDITS = 5
