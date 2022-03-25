@@ -52,6 +52,17 @@ def _convert(curr_from, curr_to, amount):
     return amount * unit_price if unit_price else None
 
 
+@app.get("/supported_currencies")
+def supported_currencies():
+    """ 
+    Returns the currencies supported by the 3rd party site.
+    No API KEY needed for this endpoint.
+    """
+    url = QUERY_URL_BASE.format("USD")
+    resp = requests.get(url).json()
+    return sorted(list(resp['rates'].keys()) + ['USD'])
+
+
 @app.get("/get_api_key/")
 def get_api_key(name: str):
     print(f"{name} is requesting api")
