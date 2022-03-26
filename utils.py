@@ -44,6 +44,7 @@ def update_user_stats(api_key, api_key_to_user, api_key_to_last_api_calls):
     user.credits -= REQUEST_CREDIT_COST
     api_key_to_last_api_calls[api_key].append(datetime.utcnow().timestamp())
 
+
 def charge_bank_account(user, credit):
     """ To be implemented """
     pass  # :) This is where the money is at, but implementation is out of scope.
